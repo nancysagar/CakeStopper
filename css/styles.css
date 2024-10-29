@@ -1,0 +1,155 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7c6cd;
+    margin: 0%;
+    padding: 0;
+    display: grid;
+    gap: 0;
+}
+
+/* Header Styles */
+header{
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0; /* Positions it at the top */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Makes it span the full width of the viewport */
+    z-index: 1000; /* Ensures it stays above other content */
+    background-color: #0e4d72;
+    height: 30px;
+}
+.headline-container {
+    line-height: 1.5; /* Adjust line spacing */
+    display: flex;
+}
+#headline1 {
+    font-size: 0.8rem;
+    animation: scroll-left 10s linear infinite;
+    font-weight: bold;
+    color: whitesmoke;
+    white-space: nowrap;      /* Keeps text on a single line */
+    overflow: hidden;         /* Hides overflow */
+    text-overflow: ellipsis; 
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%); /* Start off-screen on the right */
+    }
+    to {
+        transform: translateX(-100%); /* End off-screen on the left */
+    }
+}
+
+
+/* Banner Styles */
+.navbar {
+    position: fixed; /* Fixes the navbar at the top */
+    top: 30px; /* Positions it at the top */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Makes it span the full width of the viewport */
+    z-index: 999; /* Ensures it stays above other content */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color:  #0e4d72 !important; /* Change the text color to black */
+    transition: border 0.3s; /* Smooth transition for the border */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    border: 1px solid  #0e4d72; /* Add a white border on hover */
+    color: white; /* Change the text color to white on hover */
+    background-color: transparent; /* Optional: to ensure the background stays transparent */
+    padding: 5px; /* Optional: Add some padding to the link for better visibility */
+}
+#home{
+    background-color:  #0e4d72;
+}
+.banner img {
+    margin-top: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+.bg-baby-pink {
+    background-color:#FFB6C1 !important;
+    font-weight: bolder;
+  }
+  
+  .navbar-brand{
+    color:  #0e4d72;
+    font-size: xx-large;
+    font-family: "Oleo Script Swash Caps", system-ui;
+  }
+
+/* Product Cards */
+.card {
+    transition: transform 0.3s ease;
+    margin-bottom: 40px;
+    position: relative;
+    cursor: pointer
+}
+
+.card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0e4d72;
+    opacity: 0.8; /* Semi-transparent background */
+    color: white; /* Text color */
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.card.active .card-info {
+    display: block; 
+    justify-content: center;
+    padding-top: 50px;
+}
+.card.active .card-info .card-text{
+    padding: 40px;
+    font-family: "Roboto";
+  }
+
+
+.card.active {
+    transform: translateY(10px); /* Optional: Give a slight move down effect */
+}
+
+
+.card-img-top {
+    height: 350px;
+    object-fit: fill;
+}
+.card .card-body .card-title{
+    font-family: "Style Script", cursive;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.card-body {
+    background: rgba(255, 182, 193, 0.5);
+}
+#about {
+    background-color:#f7c6cd !important; /* Choose your desired color */
+    padding: 3rem 0; /* Ensure padding for spacing */
+    text-align: center;
+}
+.btn{
+    background-color: #0e4d72;
+}
+/* Footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+}
